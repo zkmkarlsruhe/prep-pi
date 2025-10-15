@@ -1,0 +1,4 @@
+public/
+.venv/
+.hugo_build.lock
+internal/

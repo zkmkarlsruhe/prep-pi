@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="welcome-section">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</div>
+
+<div class="resources-section">
+    <h2>{{ i18n "resourcesTitle" }}</h2>
+    <div class="card-grid">
+        {{ $resources := .Site.GetPage "section" "resources" }}
+        {{ range (where $resources.Pages ".Kind" "eq" "page").ByWeight }}
+            {{ .Render "card" }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

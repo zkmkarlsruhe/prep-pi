@@ -1,0 +1,13 @@
+{{- $type := .Get 0 -}}
+
+{{- if eq $type "regular" -}}
+<div class="regular-content">
+    <h3>{{ i18n "whatIsThis" }}</h3>
+    {{ .Inner | markdownify }}
+</div>
+{{- else if eq $type "simple" -}}
+<div class="simple-content">
+    <h3>{{ i18n "whatIsThisSimple" }}</h3>
+    {{ .Inner | markdownify }}
+</div>
+{{- end -}}

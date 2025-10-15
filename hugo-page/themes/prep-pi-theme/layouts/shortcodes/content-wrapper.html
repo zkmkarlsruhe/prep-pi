@@ -1,0 +1,11 @@
+{{- $type := .Get 0 -}}
+
+{{- if eq $type "regular" -}}
+<div class="regular-content">
+{{ .Inner | markdownify }}
+</div>
+{{- else if eq $type "simple" -}}
+<div class="simple-content">
+{{ .Inner | markdownify }}
+</div>
+{{- end -}}

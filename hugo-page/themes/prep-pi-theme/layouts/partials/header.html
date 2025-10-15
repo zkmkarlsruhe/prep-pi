@@ -1,0 +1,17 @@
+<div class="logo">
+    <a href="{{ .Site.Home.RelPermalink }}">> {{ .Site.Title }}</a>
+</div>
+<div class="controls">
+    <div class="lang-switcher">
+        <select id="lang-switcher-select" onchange="window.location.href = this.value;">
+            {{ range .Site.Sites }}
+            <option value="{{ .Home.RelPermalink }}" {{ if eq .Language.Lang $.Site.Language.Lang }}selected{{ end }}>
+                {{ .Language.LanguageName }}
+            </option>
+            {{ end }}
+        </select>
+    </div>
+    <button id="theme-toggle" title="{{ i18n "toggleTheme" }}">🌓</button>
+    <button id="contrast-toggle" title="{{ i18n "toggleContrast" }}">◐</button>
+    <button id="simple-lang-toggle" title="{{ i18n "toggleSimple" }}">Aa</button>
+</div>

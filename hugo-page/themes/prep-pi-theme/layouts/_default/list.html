@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="welcome-section">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+    {{ end }}
+</div>
+
+<div class="card-grid">
+    {{ range .Paginator.Pages }}
+        {{ .Render "card" }}
+    {{ end }}
+</div>
+{{ .Render "pagination" }}
+{{ end }}

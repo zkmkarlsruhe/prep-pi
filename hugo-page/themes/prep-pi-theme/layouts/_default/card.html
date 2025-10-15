@@ -1,0 +1,18 @@
+<div class="card">
+    <a href="{{ .RelPermalink }}" class="card-link-wrapper">
+        {{ with .Params.image }}
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="card-image">
+        {{ end }}
+        <div class="card-text-content">
+            <h3 class="card-title">{{ .Title }}</h3>
+            {{ if eq .Section "blog" }}
+                <p class="card-description">{{ .Description }}</p>
+            {{ end }}
+        </div>
+    </a>
+    {{ if .Params.file }}
+    <div class="card-download">
+        <a href="{{ .Params.file | relURL }}" download class="download-button">{{ i18n "download" }}</a>
+    </div>
+    {{ end }}
+</div>

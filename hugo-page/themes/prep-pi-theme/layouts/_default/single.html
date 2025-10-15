@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="resource-detail">
+    <h1 class="resource-title">{{ .Title }}</h1>
+    {{/* Only show the image if it exists and is not the placeholder */}}
+    {{ if and .Params.image (ne .Params.image "/images/placeholder.png") }}
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="resource-image">
+    {{ end }}
+    <div class="resource-content">
+        {{ .Content }}
+    </div>
+    {{/* Only show the download button if a file is specified in front matter */}}
+    {{ if .Params.file }}
+    <a href="{{ .Params.file | relURL }}" download class="download-button-large">{{ i18n "download" }}</a>
+    {{ end }}
+</article>
+{{ end }}

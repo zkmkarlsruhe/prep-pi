@@ -1,0 +1,29 @@
+# hugo.toml
+
+baseURL = 'http://prep.local/'
+languageCode = 'en'
+title = 'prep-pi'
+theme = 'prep-pi-theme'
+
+# Enable multilingual support
+defaultContentLanguage = 'de'
+#defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = 'English'
+    weight = 1
+  [languages.de]
+    contentDir = 'content/de'
+    languageName = 'Deutsch'
+    weight = 2
+
+# Custom parameters used by the theme
+[params]
+  description = 'Emergency resources, accessible offline.'
+  author = 'prep-pi'
+  
+# Allow raw HTML in markdown files for the simple/regular content divs
+[markup.goldmark.renderer]
+  unsafe = true
