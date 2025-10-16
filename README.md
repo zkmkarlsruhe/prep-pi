@@ -1,3 +1,5 @@
+![prep-pi Logo](prep-pi_logo.png)
+
 # prep-pi: Server für Offline Informationen
 
 prep-pi ist ein Raspberry-Pi (Zero) Webserver, der über einen WLAN-Hotspot Informationen lokal bereitstellt. Die Informationen sind auch bei ausgefallenem Internet noch verfügbar und mithilfe eines Solarpanels sogar bei Stromausfall.
