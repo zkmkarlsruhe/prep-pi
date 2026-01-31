@@ -1,6 +1,19 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/zkmkarlsruhe/zkm-open-source/main/assets/zkm-logo-light.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/zkmkarlsruhe/zkm-open-source/main/assets/zkm-logo.svg">
+    <img alt="ZKM" src="https://raw.githubusercontent.com/zkmkarlsruhe/zkm-open-source/main/assets/zkm-logo.svg" width="120">
+  </picture>
+</p>
+
 ![prep-pi Logo](prep-pi_logo.png)
 
 # prep-pi: Server für Offline Informationen
+
+[![ZKM](https://img.shields.io/badge/ZKM-Karlsruhe-blue)](https://zkm.de)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Part of [ZKM Open Source](https://github.com/zkmkarlsruhe)
 
 prep-pi ist ein Raspberry-Pi (Zero) Webserver, der über einen WLAN-Hotspot Informationen lokal bereitstellt. Die Informationen sind auch bei ausgefallenem Internet noch verfügbar und mithilfe eines Solarpanels sogar bei Stromausfall.
 
